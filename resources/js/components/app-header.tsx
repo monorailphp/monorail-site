@@ -1,16 +1,9 @@
-import { usePage } from '@inertiajs/react';
+import { Link } from '@inertiajs/react';
 import { BookOpen, Folder, Menu, Search } from 'lucide-react';
 import AppLogo from '@/components/app-logo';
 import AppLogoIcon from '@/components/app-logo-icon';
 import { Breadcrumbs } from '@/components/breadcrumbs';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
-import {
-    NavigationMenu,
-    NavigationMenuItem,
-    NavigationMenuList,
-    navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu';
 import {
     Sheet,
     SheetContent,
@@ -24,9 +17,7 @@ import {
     TooltipProvider,
     TooltipTrigger,
 } from '@/components/ui/tooltip';
-import { useCurrentUrl } from '@/hooks/use-current-url';
-import { useInitials } from '@/hooks/use-initials';
-import { cn, toUrl } from '@/lib/utils';
+import { toUrl } from '@/lib/utils';
 import type { BreadcrumbItem, NavItem } from '@/types';
 
 type Props = {
@@ -46,15 +37,7 @@ const rightNavItems: NavItem[] = [
     },
 ];
 
-const activeItemStyles =
-    'text-neutral-900 ';
-
 export function AppHeader({ breadcrumbs = [] }: Props) {
-    const page = usePage();
-    const { auth } = page.props;
-    const getInitials = useInitials();
-    const { isCurrentUrl, whenCurrentUrl } = useCurrentUrl();
-
     return (
         <>
             <div className="border-b border-sidebar-border/80">
