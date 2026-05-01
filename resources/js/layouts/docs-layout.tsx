@@ -1,10 +1,10 @@
-import { useMemo } from 'react';
 import { Link, usePage } from '@inertiajs/react';
-import { show as docsShow } from '@/routes/docs';
+import { useMemo } from 'react';
 import { DocsNavbar } from '@/components/docs-navbar';
 import { DocsPageToc } from '@/components/docs-page-toc';
 import { DocsContentContext } from '@/contexts/docs-context';
 import { processContentHtml } from '@/lib/process-content';
+import { show as docsShow } from '@/routes/docs';
 
 interface DocsPage {
     title: string;
@@ -23,14 +23,14 @@ function DocsNavItem({ page, currentPage, depth = 0 }: { page: DocsPage; current
                     href={docsShow(page.slug)}
                     className={`block rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
                         isActive
-                            ? 'bg-primary text-primary-foreground'
-                            : 'text-muted-foreground hover:bg-muted hover:text-foreground'
+                            ? 'bg-emerald-500/20 text-emerald-400'
+                            : 'text-slate-400 hover:bg-white/5 hover:text-white'
                     }`}
                 >
                     {page.title}
                 </Link>
             ) : (
-                <span className="block px-3 py-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                <span className="block px-3 py-2 text-xs font-semibold uppercase tracking-wider text-slate-500">
                     {page.title}
                 </span>
             )}
@@ -50,13 +50,16 @@ export default function DocsLayout({ children }: { children: React.ReactNode }) 
     const { pages, currentPage, content } = usePage<{ pages: DocsPage[]; currentPage: string | null; content: string | null }>().props;
 
     const processedContent = useMemo(() => {
-        if (!content) return '';
+        if (!content) {
+return '';
+}
+
         return processContentHtml(content);
     }, [content]);
 
     return (
         <DocsContentContext.Provider value={processedContent}>
-            <div className="flex min-h-screen w-full flex-col">
+            <div className="flex min-h-screen w-full flex-col bg-slate-950">
                 <DocsNavbar />
                 <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-10 px-6 py-8 md:flex-row">
                     <aside className="sticky top-14 w-full shrink-0 self-start md:w-64">

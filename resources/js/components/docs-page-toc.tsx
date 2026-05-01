@@ -13,7 +13,9 @@ interface DocsPageTocProps {
 
 export function DocsPageToc({ content }: DocsPageTocProps) {
     const headings = useMemo<TocItem[]>(() => {
-        if (!content) return [];
+        if (!content) {
+return [];
+}
 
         const parser = new DOMParser();
         const doc = parser.parseFromString(content, 'text/html');
@@ -23,22 +25,25 @@ export function DocsPageToc({ content }: DocsPageTocProps) {
             const text = el.textContent ?? '';
             const id = el.id || slugify(text);
             const level = el.tagName === 'H2' ? 2 : 3;
+
             return { id, text, level };
         });
     }, [content]);
 
-    if (headings.length === 0) return null;
+    if (headings.length === 0) {
+return null;
+}
 
     return (
         <nav className="space-y-1">
-            <span className="block px-3 py-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+            <span className="block px-3 py-2 text-xs font-semibold uppercase tracking-wider text-slate-500">
                 On this page
             </span>
             {headings.map((heading) => (
                 <a
                     key={heading.id}
                     href={`#${heading.id}`}
-                    className={`block rounded-lg px-3 py-1.5 text-sm transition-colors text-muted-foreground hover:bg-muted hover:text-foreground ${
+                    className={`block rounded-lg px-3 py-1.5 text-sm transition-colors text-slate-400 hover:bg-white/5 hover:text-white ${
                         heading.level === 3 ? 'ml-3' : ''
                     }`}
                 >

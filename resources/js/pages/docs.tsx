@@ -15,11 +15,11 @@ export default function Docs() {
             <Head title={currentPageTitle ?? 'Documentation'} />
             {processedContent ? (
                 <article
-                    className="prose prose-slate max-w-none"
+                    className="prose prose-invert prose-slate max-w-none"
                     dangerouslySetInnerHTML={{ __html: processedContent }}
                 />
             ) : (
-                <p className="text-muted-foreground">No documentation available.</p>
+                <p className="text-slate-400">No documentation available.</p>
             )}
         </>
     );

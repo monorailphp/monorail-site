@@ -9,7 +9,7 @@ export function DocsNavbar() {
     const dashboardUrl = currentTeam ? dashboard(currentTeam.slug) : '/';
 
     return (
-        <header className="sticky top-0 z-50 w-full border-b border-sidebar-border/80 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-slate-950/80 backdrop-blur supports-[backdrop-filter]:bg-slate-950/60">
             <div className="mx-auto flex h-14 items-center px-4 md:max-w-7xl">
                 <Link
                     href={dashboardUrl}
@@ -17,8 +17,8 @@ export function DocsNavbar() {
                     className="flex items-center space-x-2"
                 >
                     <AppLogo />
-                    <span className="text-muted-foreground">/</span>
-                    <span className="text-sm font-semibold">Docs</span>
+                    <span className="text-slate-600">/</span>
+                    <span className="text-sm font-semibold text-white">Docs</span>
                 </Link>
 
                 <div className="ml-auto">
