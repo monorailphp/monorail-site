@@ -1,124 +1,84 @@
 import { Head, Link } from '@inertiajs/react';
 import { ArrowRight, BookOpen, Github, Layers, LayoutDashboard, MonitorSmartphone, Puzzle } from 'lucide-react';
+import { DocsNavbar } from '@/components/docs-navbar';
 import AppLogoIcon from '@/components/app-logo-icon';
 import { Button } from '@/components/ui/button';
-
-function Navbar() {
-    return (
-        <header className="fixed top-0 right-0 left-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-md">
-            <div className="mx-auto flex h-14 max-w-7xl items-center gap-6 px-6">
-                <Link href="/" className="flex items-center gap-2.5">
-                    <div className="flex size-7 items-center justify-center rounded-md bg-white/10">
-                        <AppLogoIcon className="size-4 fill-white" />
-                    </div>
-                    <span className="text-sm font-bold tracking-tight text-white">Monorail</span>
-                </Link>
-
-                <nav className="ml-2 flex items-center gap-1">
-                    <Link
-                        href="/docs"
-                        className="rounded-md px-3 py-1.5 text-sm text-slate-400 transition-colors hover:bg-white/5 hover:text-white"
-                    >
-                        Docs
-                    </Link>
-                    <a
-                        href="https://github.com/rocketphp/monorail"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="rounded-md px-3 py-1.5 text-sm text-slate-400 transition-colors hover:bg-white/5 hover:text-white"
-                    >
-                        GitHub
-                    </a>
-                </nav>
-
-                <div className="ml-auto">
-                    <Button size="sm" asChild className="bg-white text-slate-950 hover:bg-slate-100">
-                        <Link href="/docs/getting-started/installation">
-                            Get Started
-                            <ArrowRight className="ml-1 size-3.5" />
-                        </Link>
-                    </Button>
-                </div>
-            </div>
-        </header>
-    );
-}
 
 function CodeBlock() {
     return (
         <pre className="overflow-x-auto text-sm leading-relaxed">
             <code>
                 <span className="text-slate-500">{'<?php\n\n'}</span>
-                <span className="text-violet-400">{'class '}</span>
-                <span className="text-sky-300">{'UserResource '}</span>
-                <span className="text-violet-400">{'extends '}</span>
-                <span className="text-sky-300">{'Resource\n'}</span>
-                <span className="text-slate-300">{'{\n'}</span>
+                <span className="text-violet-600">{'class '}</span>
+                <span className="text-blue-600">{'UserResource '}</span>
+                <span className="text-violet-600">{'extends '}</span>
+                <span className="text-blue-600">{'Resource\n'}</span>
+                <span className="text-slate-606">{'{\n'}</span>
                 <span className="text-slate-500">{'    protected static '}</span>
-                <span className="text-violet-400">{'string '}</span>
-                <span className="text-slate-300">{'$model = '}</span>
-                <span className="text-sky-300">{'User'}</span>
-                <span className="text-slate-300">{'::class;\n\n'}</span>
+                <span className="text-violet-600">{'string '}</span>
+                <span className="text-slate-606">{'$model = '}</span>
+                <span className="text-blue-600">{'User'}</span>
+                <span className="text-slate-606">{'::class;\n\n'}</span>
 
                 <span className="text-slate-500">{'    public static function '}</span>
-                <span className="text-amber-300">{'table'}</span>
-                <span className="text-slate-300">{'('}</span>
-                <span className="text-sky-300">{'Table '}</span>
-                <span className="text-slate-300">{'$table): '}</span>
-                <span className="text-sky-300">{'Table\n'}</span>
-                <span className="text-slate-300">{'    {\n'}</span>
+                <span className="text-amber-600">{'table'}</span>
+                <span className="text-slate-606">{'('}</span>
+                <span className="text-blue-600">{'Table '}</span>
+                <span className="text-slate-606">{'$table): '}</span>
+                <span className="text-blue-600">{'Table\n'}</span>
+                <span className="text-slate-606">{'    {\n'}</span>
                 <span className="text-slate-500">{'        return '}</span>
-                <span className="text-slate-300">{'$table\n'}</span>
-                <span className="text-slate-300">{'            ->'}</span>
-                <span className="text-amber-300">{'columns'}</span>
-                <span className="text-slate-300">{'([\n'}</span>
+                <span className="text-slate-606">{'$table\n'}</span>
+                <span className="text-slate-606">{'            ->'}</span>
+                <span className="text-amber-600">{'columns'}</span>
+                <span className="text-slate-606">{'([\n'}</span>
 
-                <span className="text-slate-300">{'                '}</span>
-                <span className="text-sky-300">{'TextColumn'}</span>
-                <span className="text-slate-300">{'::make('}</span>
-                <span className="text-emerald-400">{`'name'`}</span>
-                <span className="text-slate-300">{')->'}</span>
-                <span className="text-amber-300">{'searchable'}</span>
-                <span className="text-slate-300">{'(),\n'}</span>
+                <span className="text-slate-606">{'                '}</span>
+                <span className="text-blue-600">{'TextColumn'}</span>
+                <span className="text-slate-606">{'::make('}</span>
+                <span className="text-emerald-600">{`'name'`}</span>
+                <span className="text-slate-606">{')->'}</span>
+                <span className="text-amber-600">{'searchable'}</span>
+                <span className="text-slate-606">{'(),\n'}</span>
 
-                <span className="text-slate-300">{'                '}</span>
-                <span className="text-sky-300">{'TextColumn'}</span>
-                <span className="text-slate-300">{'::make('}</span>
-                <span className="text-emerald-400">{`'email'`}</span>
-                <span className="text-slate-300">{')->'}</span>
-                <span className="text-amber-300">{'copyable'}</span>
-                <span className="text-slate-300">{'(),\n'}</span>
+                <span className="text-slate-606">{'                '}</span>
+                <span className="text-blue-600">{'TextColumn'}</span>
+                <span className="text-slate-606">{'::make('}</span>
+                <span className="text-emerald-600">{`'email'`}</span>
+                <span className="text-slate-606">{')->'}</span>
+                <span className="text-amber-600">{'copyable'}</span>
+                <span className="text-slate-606">{'(),\n'}</span>
 
-                <span className="text-slate-300">{'                '}</span>
-                <span className="text-sky-300">{'BadgeColumn'}</span>
-                <span className="text-slate-300">{'::make('}</span>
-                <span className="text-emerald-400">{`'role'`}</span>
-                <span className="text-slate-300">{')->'}</span>
-                <span className="text-amber-300">{'colors'}</span>
-                <span className="text-slate-300">{'([...]),\n'}</span>
+                <span className="text-slate-606">{'                '}</span>
+                <span className="text-blue-600">{'BadgeColumn'}</span>
+                <span className="text-slate-606">{'::make('}</span>
+                <span className="text-emerald-600">{`'role'`}</span>
+                <span className="text-slate-606">{')->'}</span>
+                <span className="text-amber-600">{'colors'}</span>
+                <span className="text-slate-606">{'([...]),\n'}</span>
 
-                <span className="text-slate-300">{'                '}</span>
-                <span className="text-sky-300">{'TextColumn'}</span>
-                <span className="text-slate-300">{'::make('}</span>
-                <span className="text-emerald-400">{`'created_at'`}</span>
-                <span className="text-slate-300">{')->'}</span>
-                <span className="text-amber-300">{'since'}</span>
-                <span className="text-slate-300">{'(),\n'}</span>
+                <span className="text-slate-606">{'                '}</span>
+                <span className="text-blue-600">{'TextColumn'}</span>
+                <span className="text-slate-606">{'::make('}</span>
+                <span className="text-emerald-600">{`'created_at'`}</span>
+                <span className="text-slate-606">{')->'}</span>
+                <span className="text-amber-600">{'since'}</span>
+                <span className="text-slate-606">{'(),\n'}</span>
 
-                <span className="text-slate-300">{'            ])\n'}</span>
-                <span className="text-slate-300">{'            ->'}</span>
-                <span className="text-amber-300">{'filters'}</span>
-                <span className="text-slate-300">{'([\n'}</span>
-                <span className="text-slate-300">{'                '}</span>
-                <span className="text-sky-300">{'SelectFilter'}</span>
-                <span className="text-slate-300">{'::make('}</span>
-                <span className="text-emerald-400">{`'role'`}</span>
-                <span className="text-slate-300">{')->'}</span>
-                <span className="text-amber-300">{'options'}</span>
-                <span className="text-slate-300">{'([...]),\n'}</span>
-                <span className="text-slate-300">{'            ]);\n'}</span>
-                <span className="text-slate-300">{'    }\n'}</span>
-                <span className="text-slate-300">{'}'}</span>
+                <span className="text-slate-606">{'            ])\n'}</span>
+                <span className="text-slate-606">{'            ->'}</span>
+                <span className="text-amber-600">{'filters'}</span>
+                <span className="text-slate-606">{'([\n'}</span>
+                <span className="text-slate-606">{'                '}</span>
+                <span className="text-blue-600">{'SelectFilter'}</span>
+                <span className="text-slate-606">{'::make('}</span>
+                <span className="text-emerald-600">{`'role'`}</span>
+                <span className="text-slate-606">{')->'}</span>
+                <span className="text-amber-600">{'options'}</span>
+                <span className="text-slate-606">{'([...]),\n'}</span>
+                <span className="text-slate-606">{'            ]);\n'}</span>
+                <span className="text-slate-606">{'    }\n'}</span>
+                <span className="text-slate-606">{'}'}</span>
             </code>
         </pre>
     );
@@ -132,31 +92,31 @@ function AdminMockup() {
     ];
 
     return (
-        <div className="flex min-h-[420px] flex-col overflow-hidden rounded-lg border border-slate-700 bg-slate-900 text-xs">
+        <div className="flex min-h-[420px] flex-col overflow-hidden rounded-lg border border-slate-200 bg-white text-xs shadow-sm">
             {/* Fake browser chrome */}
-            <div className="flex items-center gap-1.5 border-b border-slate-700 bg-slate-800 px-3 py-2.5">
+            <div className="flex items-center gap-1.5 border-b border-slate-200 bg-slate-50 px-3 py-2.5">
                 <div className="size-2.5 rounded-full bg-red-500/70" />
                 <div className="size-2.5 rounded-full bg-yellow-500/70" />
                 <div className="size-2.5 rounded-full bg-green-500/70" />
-                <div className="mx-3 flex-1 rounded bg-slate-700 px-2 py-0.5 text-center text-slate-500">
+                <div className="mx-3 flex-1 rounded bg-slate-100 px-2 py-0.5 text-center text-slate-400">
                     myapp.test/admin/users
                 </div>
             </div>
 
             <div className="flex flex-1 overflow-hidden">
                 {/* Sidebar */}
-                <div className="w-40 shrink-0 border-r border-slate-700 bg-slate-800/60 p-2.5">
+                <div className="w-40 shrink-0 border-r border-slate-200 bg-slate-50/50 p-2.5">
                     <div className="mb-4 flex items-center gap-1.5 px-1">
-                        <div className="flex size-4 items-center justify-center rounded bg-emerald-500/20">
-                            <AppLogoIcon className="size-2.5 fill-emerald-400" />
+                        <div className="flex size-4 items-center justify-center rounded bg-emerald-500/10">
+                            <AppLogoIcon className="size-2.5 fill-emerald-600" />
                         </div>
-                        <span className="text-[10px] font-semibold text-white">Admin</span>
+                        <span className="text-[10px] font-semibold text-slate-900">Admin</span>
                     </div>
                     <div className="space-y-0.5">
-                        <div className="rounded px-2 py-1.5 text-slate-400">Dashboard</div>
-                        <div className="rounded bg-emerald-500/20 px-2 py-1.5 font-medium text-emerald-400">Users</div>
-                        <div className="rounded px-2 py-1.5 text-slate-400">Posts</div>
-                        <div className="rounded px-2 py-1.5 text-slate-400">Settings</div>
+                        <div className="rounded px-2 py-1.5 text-slate-500">Dashboard</div>
+                        <div className="rounded bg-emerald-500/10 px-2 py-1.5 font-medium text-emerald-700">Users</div>
+                        <div className="rounded px-2 py-1.5 text-slate-500">Posts</div>
+                        <div className="rounded px-2 py-1.5 text-slate-500">Settings</div>
                     </div>
                 </div>
 
@@ -164,25 +124,25 @@ function AdminMockup() {
                 <div className="flex flex-1 flex-col overflow-hidden p-4">
                     <div className="mb-3 flex items-center justify-between">
                         <div>
-                            <div className="font-semibold text-white">Users</div>
+                            <div className="font-semibold text-slate-900">Users</div>
                             <div className="text-slate-500">3 team members</div>
                         </div>
-                        <button className="rounded-md bg-emerald-500 px-2.5 py-1 font-medium text-white">+ New User</button>
+                        <button className="rounded-md bg-emerald-600 px-2.5 py-1 font-medium text-white">+ New User</button>
                     </div>
 
                     {/* Filter bar */}
                     <div className="mb-3 flex gap-1.5">
-                        <div className="flex-1 rounded-md border border-slate-700 bg-slate-800 px-2.5 py-1.5 text-slate-500">
+                        <div className="flex-1 rounded-md border border-slate-200 bg-slate-50 px-2.5 py-1.5 text-slate-400">
                             Search users...
                         </div>
-                        <div className="rounded-md border border-slate-700 bg-slate-800 px-2.5 py-1.5 text-slate-400">
+                        <div className="rounded-md border border-slate-200 bg-white px-2.5 py-1.5 text-slate-606">
                             Role ▾
                         </div>
                     </div>
 
                     {/* Table */}
-                    <div className="overflow-hidden rounded-md border border-slate-700">
-                        <div className="grid grid-cols-4 border-b border-slate-700 bg-slate-800 px-3 py-2 text-slate-400">
+                    <div className="overflow-hidden rounded-md border border-slate-200">
+                        <div className="grid grid-cols-4 border-b border-slate-200 bg-slate-50 px-3 py-2 text-slate-500">
                             <div>Name</div>
                             <div>Email</div>
                             <div>Role</div>
@@ -191,18 +151,18 @@ function AdminMockup() {
                         {users.map((u, i) => (
                             <div
                                 key={i}
-                                className="grid grid-cols-4 border-b border-slate-700/50 px-3 py-2.5 last:border-0 hover:bg-slate-800/50"
+                                className="grid grid-cols-4 border-b border-slate-100 px-3 py-2.5 last:border-0 hover:bg-slate-50"
                             >
-                                <div className="font-medium text-white">{u.name}</div>
-                                <div className="text-slate-400">{u.email}</div>
+                                <div className="font-medium text-slate-900">{u.name}</div>
+                                <div className="text-slate-606">{u.email}</div>
                                 <div>
                                     <span
-                                        className={`rounded px-1.5 py-0.5 text-[10px] font-medium ${u.role === 'Admin' ? 'bg-violet-500/20 text-violet-400' : 'bg-slate-700 text-slate-300'}`}
+                                        className={`rounded px-1.5 py-0.5 text-[10px] font-medium ${u.role === 'Admin' ? 'bg-violet-100 text-violet-700' : 'bg-slate-100 text-slate-606'}`}
                                     >
                                         {u.role}
                                     </span>
                                 </div>
-                                <div className="text-slate-500">{u.date}</div>
+                                <div className="text-slate-400">{u.date}</div>
                             </div>
                         ))}
                     </div>
@@ -267,25 +227,24 @@ export default function Home() {
         <>
             <Head title="Monorail — Admin panels for Laravel + Inertia + React" />
 
-            <Navbar />
+            <DocsNavbar />
 
             {/* Hero */}
             <section className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-slate-950 px-6 pt-14">
                 {/* Background grid */}
                 <div
-                    className="absolute inset-0 opacity-[0.03]"
+                    className="pointer-events-none absolute inset-0 opacity-[0.03]"
                     style={{
                         backgroundImage:
                             'linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)',
                         backgroundSize: '48px 48px',
                     }}
                 />
-
                 {/* Glow */}
                 <div className="pointer-events-none absolute top-1/4 right-1/4 h-[500px] w-[500px] rounded-full bg-emerald-500/8 blur-3xl" />
                 <div className="pointer-events-none absolute bottom-1/4 left-1/4 h-[300px] w-[300px] rounded-full bg-emerald-500/5 blur-3xl" />
 
-                <div className="relative z-10 mx-auto w-full max-w-7xl">
+                <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center text-center">
                     <p className="font-mono text-xs tracking-wide text-emerald-400/70">
                         Admin panels for Laravel · Inertia.js · React
                     </p>
@@ -326,13 +285,13 @@ export default function Home() {
                     </div>
 
                     <div className="mt-8 inline-flex items-center gap-2 rounded-md border border-white/10 bg-white/5 px-4 py-2.5 font-mono text-sm">
-                        <span className="text-slate-600">$</span>
+                        <span className="text-slate-606">$</span>
                         <span className="text-slate-300">composer require monorail/monorail</span>
                     </div>
                 </div>
 
                 {/* Scroll indicator — smooth float, hidden on reduced motion */}
-                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-slate-600 motion-safe:animate-float">
+                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-slate-606 motion-safe:animate-float">
                     <svg className="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
                     </svg>
@@ -340,28 +299,28 @@ export default function Home() {
             </section>
 
             {/* Code demo */}
-            <section className="bg-slate-950 px-6 py-24">
+            <section className="bg-slate-50 px-6 py-24">
                 <div className="mx-auto max-w-7xl">
                     <div className="mb-12">
                         <h2
-                            className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-bold tracking-tight text-white"
+                            className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-bold tracking-tight text-slate-900"
                             style={{ lineHeight: 1.15, letterSpacing: '-0.01em' }}
                         >
                             One PHP class.
                             <br />
-                            <span className="text-emerald-400">A full React admin UI.</span>
+                            <span className="text-emerald-600">A full React admin UI.</span>
                         </h2>
-                        <p className="mt-4 max-w-lg text-slate-400">
+                        <p className="mt-4 max-w-lg text-slate-606">
                             Define it in PHP. Inertia ships it. React renders it.
                         </p>
                     </div>
 
-                    <div className="relative grid overflow-hidden rounded-xl border border-slate-800 bg-slate-900 lg:grid-cols-[2fr_3fr]">
+                    <div className="relative grid overflow-hidden rounded-xl border border-slate-200 bg-white lg:grid-cols-[2fr_3fr]">
                         {/* Pipeline accent */}
                         <div className="absolute bottom-6 top-6 right-[60%] hidden w-px bg-gradient-to-b from-transparent via-emerald-500/30 to-transparent lg:block" />
 
                         {/* PHP code */}
-                        <div className="border-b border-slate-800 p-6 lg:border-b-0 lg:border-r">
+                        <div className="border-b border-slate-200 bg-slate-50 p-6 lg:border-b-0 lg:border-r">
                             <div className="mb-3 flex items-center gap-2">
                                 <div className="size-2.5 rounded-full bg-red-500/70" />
                                 <div className="size-2.5 rounded-full bg-yellow-500/70" />
@@ -372,7 +331,7 @@ export default function Home() {
                         </div>
 
                         {/* UI output */}
-                        <div className="flex flex-col p-6">
+                        <div className="flex flex-col bg-slate-50 p-6">
                             <div className="mb-3 text-xs text-slate-500">Rendered UI</div>
                             <div className="flex-1">
                                 <AdminMockup />
