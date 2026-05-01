@@ -7,6 +7,8 @@
 /public/storage
 /storage/*.key
 /storage/pail
+/public/llms.txt
+/public/llms-full.txt
 /resources/js/actions
 /resources/js/routes
 /resources/js/wayfinder
