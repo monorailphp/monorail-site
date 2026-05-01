@@ -97,6 +97,15 @@
     --sidebar-ring: oklch(0.205 0.06 130);
 }
 
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(6px); }
+}
+
+@theme {
+    --animate-float: float 3s ease-in-out infinite;
+}
+
 @layer base {
     * {
         @apply border-border;
@@ -104,5 +113,34 @@
 
     body {
         @apply bg-background text-foreground;
+    }
+}
+
+@layer components {
+    /* Override prose-slate blockquote — left-stripe border is banned; use background tint instead */
+    .prose blockquote {
+        border-left: none;
+        background: var(--muted);
+        padding: 0.875rem 1.25rem;
+        border-radius: var(--radius-md);
+        font-style: normal;
+    }
+    .prose blockquote p::before,
+    .prose blockquote p::after {
+        content: none;
+    }
+
+    /* Use primary token for prose links */
+    .prose a {
+        color: var(--primary);
+        text-decoration-color: color-mix(in oklch, var(--primary), transparent 60%);
+    }
+    .prose a:hover {
+        color: oklch(from var(--primary) calc(l + 0.05) c h);
+    }
+
+    /* Tighten prose heading tracking to match design system */
+    .prose h1, .prose h2, .prose h3 {
+        letter-spacing: -0.01em;
     }
 }

@@ -17,7 +17,7 @@ function Navbar() {
                 <nav className="ml-2 flex items-center gap-1">
                     <Link
                         href="/docs"
-                        className="rounded-md px-3 py-1.5 text-sm text-slate-400 transition-colors hover:text-white"
+                        className="rounded-md px-3 py-1.5 text-sm text-slate-400 transition-colors hover:bg-white/5 hover:text-white"
                     >
                         Docs
                     </Link>
@@ -25,7 +25,7 @@ function Navbar() {
                         href="https://github.com/rocketphp/monorail"
                         target="_blank"
                         rel="noreferrer"
-                        className="rounded-md px-3 py-1.5 text-sm text-slate-400 transition-colors hover:text-white"
+                        className="rounded-md px-3 py-1.5 text-sm text-slate-400 transition-colors hover:bg-white/5 hover:text-white"
                     >
                         GitHub
                     </a>
@@ -165,7 +165,7 @@ function AdminMockup() {
                     <div className="mb-2 flex items-center justify-between">
                         <div>
                             <div className="font-semibold text-white">Users</div>
-                            <div className="text-slate-500">Manage your team members</div>
+                            <div className="text-slate-500">3 team members</div>
                         </div>
                         <button className="rounded bg-emerald-500 px-2 py-1 font-medium text-white">+ New User</button>
                     </div>
@@ -221,12 +221,12 @@ const primitives = [
     {
         icon: LayoutDashboard,
         name: 'Resource',
-        description: 'An Eloquent model bound to a full CRUD interface — table, form, policies, and relation managers.',
+        description: 'An Eloquent model bound to a full CRUD interface: table, form, policies, and relation managers.',
     },
     {
         icon: MonitorSmartphone,
         name: 'Page',
-        description: "The unit of routing. Every screen — list, edit, custom — is a Page subclass with full lifecycle control.",
+        description: 'The unit of routing. Every screen — list, edit, custom — is a Page subclass with full lifecycle control.',
     },
     {
         icon: Puzzle,
@@ -242,7 +242,7 @@ const features = [
     },
     {
         name: 'Forms',
-        description: 'Fields, sections, tabs, repeaters, and wizard steps — all defined in PHP, rendered in React.',
+        description: 'Fields, sections, tabs, repeaters, and wizard steps: all defined in PHP, rendered in React.',
     },
     {
         name: 'Authorization',
@@ -302,8 +302,9 @@ export default function Home() {
                     </h1>
 
                     <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-400">
-                        Build admin panels as PHP classes. Monorail serializes them to UI schemas, delivers them via Inertia.js,
-                        and React renders the result — no TypeScript schemas to duplicate, no frontend wiring to maintain.
+                        Build admin panels as PHP classes. Monorail serializes them to UI schemas, delivers them via
+                        Inertia.js, and React renders the result. No TypeScript schemas to duplicate, no frontend wiring
+                        to maintain.
                     </p>
 
                     <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
@@ -313,7 +314,12 @@ export default function Home() {
                                 <ArrowRight className="ml-2 size-4" />
                             </Link>
                         </Button>
-                        <Button size="lg" variant="outline" asChild className="border-white/10 bg-white/5 text-white hover:bg-white/10 hover:text-white">
+                        <Button
+                            size="lg"
+                            variant="outline"
+                            asChild
+                            className="border-white/10 bg-white/5 text-white hover:bg-white/10 hover:text-white"
+                        >
                             <Link href="/docs">
                                 <BookOpen className="mr-2 size-4" />
                                 Read the Docs
@@ -327,10 +333,10 @@ export default function Home() {
                     </div>
                 </div>
 
-                {/* Scroll indicator */}
-                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-slate-600">
-                    <svg className="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                {/* Scroll indicator — smooth float, hidden on reduced motion */}
+                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-slate-600 motion-safe:animate-float">
+                    <svg className="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
                     </svg>
                 </div>
             </section>
@@ -339,11 +345,13 @@ export default function Home() {
             <section className="bg-slate-950 px-6 pb-24">
                 <div className="mx-auto max-w-7xl">
                     <div className="mb-10 text-center">
-                        <h2 className="text-2xl font-bold text-white">One PHP class. A full React admin UI.</h2>
+                        <h2 className="text-3xl font-bold tracking-tight text-white">
+                            One PHP class. A full React admin UI.
+                        </h2>
                         <p className="mt-2 text-slate-400">Define it in PHP. Inertia ships it. React renders it.</p>
                     </div>
 
-                    <div className="grid gap-6 overflow-hidden rounded-xl border border-slate-800 bg-slate-900 lg:grid-cols-2">
+                    <div className="grid overflow-hidden rounded-xl border border-slate-800 bg-slate-900 lg:grid-cols-2">
                         {/* PHP code */}
                         <div className="border-b border-slate-800 p-6 lg:border-b-0 lg:border-r">
                             <div className="mb-3 flex items-center gap-2">
@@ -357,7 +365,7 @@ export default function Home() {
 
                         {/* UI output */}
                         <div className="flex flex-col p-6">
-                            <div className="mb-3 text-xs text-slate-500">Rendered UI →</div>
+                            <div className="mb-3 text-xs text-slate-500">Rendered UI</div>
                             <div className="flex-1">
                                 <AdminMockup />
                             </div>
@@ -366,89 +374,98 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Primitives */}
-            <section className="bg-white px-6 py-24">
-                <div className="mx-auto max-w-7xl">
-                    <div className="mb-12 text-center">
-                        <h2 className="text-3xl font-bold tracking-tight text-slate-900">Four primitives. Every screen.</h2>
-                        <p className="mt-3 text-lg text-slate-500">
+            {/* Primitives — numbered spec list, no cards */}
+            <section className="bg-background px-6 py-24">
+                <div className="mx-auto max-w-5xl">
+                    <div className="mb-14">
+                        <h2 className="text-3xl font-bold tracking-tight text-foreground">Four primitives. Every screen.</h2>
+                        <p className="mt-3 text-lg text-muted-foreground">
                             Everything in Monorail is composed from four building blocks.
                         </p>
                     </div>
 
-                    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                        {primitives.map((p) => (
-                            <div
-                                key={p.name}
-                                className="group rounded-xl border border-slate-200 bg-white p-6 transition-shadow hover:shadow-md"
-                            >
-                                <div className="mb-4 flex size-10 items-center justify-center rounded-lg bg-slate-100 text-slate-600 transition-colors group-hover:bg-emerald-50 group-hover:text-emerald-600">
-                                    <p.icon className="size-5" />
+                    <div className="divide-y divide-border">
+                        {primitives.map((p, i) => (
+                            <div key={p.name} className="flex items-start gap-8 py-8">
+                                <div className="w-7 shrink-0 pt-0.5 font-mono text-sm tabular-nums text-muted-foreground/40">
+                                    {String(i + 1).padStart(2, '0')}
                                 </div>
-                                <h3 className="mb-1.5 text-base font-semibold text-slate-900">{p.name}</h3>
-                                <p className="text-sm leading-relaxed text-slate-500">{p.description}</p>
+                                <div className="flex flex-1 flex-col gap-2 sm:flex-row sm:items-baseline sm:gap-10">
+                                    <div className="flex w-32 shrink-0 items-center gap-2">
+                                        <p.icon className="size-[15px] shrink-0 text-muted-foreground" />
+                                        <span className="text-sm font-semibold text-foreground">{p.name}</span>
+                                    </div>
+                                    <p className="text-sm leading-relaxed text-muted-foreground">{p.description}</p>
+                                </div>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Features grid */}
-            <section className="bg-slate-50 px-6 py-24">
-                <div className="mx-auto max-w-7xl">
-                    <div className="mb-12 text-center">
-                        <h2 className="text-3xl font-bold tracking-tight text-slate-900">
+            {/* Features — definition list, no cards */}
+            <section className="bg-muted px-6 py-24">
+                <div className="mx-auto max-w-5xl">
+                    <div className="mb-14">
+                        <h2 className="text-3xl font-bold tracking-tight text-foreground">
                             Everything an admin panel needs.
                         </h2>
-                        <p className="mt-3 text-lg text-slate-500">Batteries included, all server-driven.</p>
+                        <p className="mt-3 text-lg text-muted-foreground">Batteries included, all server-driven.</p>
                     </div>
 
-                    <div className="grid gap-px overflow-hidden rounded-xl border border-slate-200 bg-slate-200 sm:grid-cols-2 lg:grid-cols-3">
+                    <dl className="divide-y divide-border">
                         {features.map((f) => (
-                            <div key={f.name} className="bg-white p-6">
-                                <h3 className="mb-2 text-sm font-semibold text-slate-900">{f.name}</h3>
-                                <p className="text-sm leading-relaxed text-slate-500">{f.description}</p>
+                            <div
+                                key={f.name}
+                                className="grid grid-cols-[140px_1fr] items-baseline gap-8 py-5 sm:grid-cols-[180px_1fr]"
+                            >
+                                <dt className="text-sm font-semibold text-foreground">{f.name}</dt>
+                                <dd className="text-sm leading-relaxed text-muted-foreground">{f.description}</dd>
                             </div>
                         ))}
-                    </div>
+                    </dl>
                 </div>
             </section>
 
-            {/* Why SDUI */}
-            <section className="bg-white px-6 py-24">
+            {/* Why SDUI — numbered steps with dividers, no cards */}
+            <section className="bg-background px-6 py-24">
                 <div className="mx-auto max-w-3xl text-center">
-                    <h2 className="text-3xl font-bold tracking-tight text-slate-900">Why Server-Driven UI?</h2>
-                    <p className="mt-4 text-lg leading-relaxed text-slate-500">
-                        You define panels, resources, tables, and forms as PHP classes. Monorail serializes those definitions
-                        and Inertia.js delivers them to React as props. No duplicated TypeScript, no split mental model — PHP
-                        stays the single source of truth.
+                    <h2 className="text-3xl font-bold tracking-tight text-foreground">Why Server-Driven UI?</h2>
+                    <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+                        You define panels, resources, tables, and forms as PHP classes. Monorail serializes those
+                        definitions and Inertia.js delivers them to React as props. No duplicated TypeScript, no split
+                        mental model. PHP stays the single source of truth.
                     </p>
 
-                    <div className="mt-10 grid gap-6 text-left sm:grid-cols-3">
-                        <div className="rounded-lg bg-slate-50 p-5">
-                            <div className="mb-2 text-sm font-semibold text-slate-900">PHP stays the authority</div>
-                            <p className="text-sm leading-relaxed text-slate-500">
-                                Panels, resources, columns, fields — all PHP classes. Zero TypeScript schemas to keep in sync.
+                    <div className="mt-12 flex flex-col divide-y divide-border text-left sm:flex-row sm:divide-x sm:divide-y-0">
+                        <div className="flex-1 py-8 sm:py-0 sm:pr-8">
+                            <div className="mb-3 font-mono text-xs text-muted-foreground/40">01</div>
+                            <div className="mb-2 text-sm font-semibold text-foreground">PHP stays the authority</div>
+                            <p className="text-sm leading-relaxed text-muted-foreground">
+                                Panels, resources, columns, fields: all PHP classes. Zero TypeScript schemas to keep in sync.
                             </p>
                         </div>
-                        <div className="rounded-lg bg-slate-50 p-5">
-                            <div className="mb-2 text-sm font-semibold text-slate-900">Inertia as the bridge</div>
-                            <p className="text-sm leading-relaxed text-slate-500">
-                                The server serializes UI schemas as JSON props. Inertia delivers them on every navigation — no API layer needed.
+                        <div className="flex-1 py-8 sm:py-0 sm:px-8">
+                            <div className="mb-3 font-mono text-xs text-muted-foreground/40">02</div>
+                            <div className="mb-2 text-sm font-semibold text-foreground">Inertia as the bridge</div>
+                            <p className="text-sm leading-relaxed text-muted-foreground">
+                                The server serializes UI schemas as JSON props. Inertia delivers them on every navigation.
+                                No API layer needed.
                             </p>
                         </div>
-                        <div className="rounded-lg bg-slate-50 p-5">
-                            <div className="mb-2 text-sm font-semibold text-slate-900">React does the rendering</div>
-                            <p className="text-sm leading-relaxed text-slate-500">
-                                Components are real React — full ecosystem access, custom renderers, and proper SPA behavior.
+                        <div className="flex-1 py-8 sm:py-0 sm:pl-8">
+                            <div className="mb-3 font-mono text-xs text-muted-foreground/40">03</div>
+                            <div className="mb-2 text-sm font-semibold text-foreground">React does the rendering</div>
+                            <p className="text-sm leading-relaxed text-muted-foreground">
+                                Components are real React: full ecosystem access, custom renderers, and proper SPA behavior.
                             </p>
                         </div>
                     </div>
 
-                    <div className="mt-8">
+                    <div className="mt-10">
                         <Link
                             href="/docs/advanced/server-driven-ui"
-                            className="text-sm font-medium text-emerald-600 hover:text-emerald-500"
+                            className="text-sm font-medium text-primary hover:opacity-80"
                         >
                             Read the SDUI concept guide →
                         </Link>
@@ -460,9 +477,7 @@ export default function Home() {
             <section className="bg-slate-950 px-6 py-24">
                 <div className="mx-auto max-w-2xl text-center">
                     <h2 className="text-3xl font-bold tracking-tight text-white">Ready to build?</h2>
-                    <p className="mt-3 text-slate-400">
-                        One package install away from a fully-featured admin panel.
-                    </p>
+                    <p className="mt-3 text-slate-400">One package install away from a fully-featured admin panel.</p>
 
                     <div className="mt-8 inline-flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 px-5 py-3 font-mono text-base text-slate-300">
                         <span className="text-slate-500">$</span>
@@ -476,7 +491,12 @@ export default function Home() {
                                 <ArrowRight className="ml-2 size-4" />
                             </Link>
                         </Button>
-                        <Button size="lg" variant="outline" asChild className="border-white/10 bg-white/5 text-white hover:bg-white/10 hover:text-white">
+                        <Button
+                            size="lg"
+                            variant="outline"
+                            asChild
+                            className="border-white/10 bg-white/5 text-white hover:bg-white/10 hover:text-white"
+                        >
                             <Link href="/docs/getting-started/quick-start">Quick Start</Link>
                         </Button>
                     </div>
@@ -491,7 +511,8 @@ export default function Home() {
                             <AppLogoIcon className="size-3.5 fill-white" />
                         </div>
                         <span className="text-sm font-semibold text-white">Monorail</span>
-                        <span className="text-sm text-slate-600">— Server-Driven UI for Laravel</span>
+                        <span className="text-slate-700">/</span>
+                        <span className="text-sm text-slate-500">Server-Driven UI for Laravel</span>
                     </div>
                     <div className="flex items-center gap-4 text-sm text-slate-500">
                         <Link href="/docs" className="hover:text-slate-300">
@@ -501,7 +522,7 @@ export default function Home() {
                             href="https://github.com/rocketphp/monorail"
                             target="_blank"
                             rel="noreferrer"
-                            className="flex items-center gap-1 hover:text-slate-300"
+                            className="flex items-center gap-1.5 hover:text-slate-300"
                         >
                             <Github className="size-3.5" />
                             GitHub

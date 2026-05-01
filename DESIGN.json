@@ -1,0 +1,334 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-01T14:17:00Z",
+  "title": "Design System: Monorail",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Precision Ink",
+        "canonical": "oklch(0.205 0.06 130)",
+        "tonalRamp": [
+          "oklch(0.15 0.04 130)",
+          "oklch(0.205 0.06 130)",
+          "oklch(0.28 0.07 130)",
+          "oklch(0.38 0.08 130)",
+          "oklch(0.50 0.09 130)",
+          "oklch(0.65 0.08 130)",
+          "oklch(0.80 0.05 130)",
+          "oklch(0.95 0.01 130)"
+        ]
+      },
+      "primary-fg": {
+        "role": "primary-foreground",
+        "displayName": "Blueprint White",
+        "canonical": "oklch(0.985 0 0)",
+        "tonalRamp": ["oklch(0.985 0 0)"]
+      },
+      "surface-light": {
+        "role": "neutral",
+        "displayName": "Workshop White",
+        "canonical": "oklch(1 0 0)",
+        "tonalRamp": [
+          "oklch(0.15 0.005 130)",
+          "oklch(0.30 0.006 130)",
+          "oklch(0.45 0.007 130)",
+          "oklch(0.60 0.007 130)",
+          "oklch(0.75 0.006 130)",
+          "oklch(0.88 0.005 130)",
+          "oklch(0.97 0.01 130)",
+          "oklch(1 0 0)"
+        ]
+      },
+      "surface-subtle": {
+        "role": "neutral",
+        "displayName": "Blueprint Linen",
+        "canonical": "oklch(0.97 0.01 130)",
+        "tonalRamp": [
+          "oklch(0.15 0.005 130)",
+          "oklch(0.30 0.006 130)",
+          "oklch(0.45 0.007 130)",
+          "oklch(0.60 0.007 130)",
+          "oklch(0.75 0.006 130)",
+          "oklch(0.88 0.005 130)",
+          "oklch(0.97 0.01 130)",
+          "oklch(1 0 0)"
+        ]
+      },
+      "surface-dark": {
+        "role": "neutral",
+        "displayName": "Engine Room",
+        "canonical": "#020617",
+        "tonalRamp": [
+          "#020617",
+          "#0f172a",
+          "#1e293b",
+          "#334155",
+          "#475569",
+          "#64748b",
+          "#94a3b8",
+          "#cbd5e1"
+        ]
+      },
+      "surface-raised": {
+        "role": "neutral",
+        "displayName": "Instrument Bay",
+        "canonical": "#0f172a",
+        "tonalRamp": [
+          "#020617",
+          "#0f172a",
+          "#1e293b",
+          "#334155",
+          "#475569",
+          "#64748b",
+          "#94a3b8",
+          "#cbd5e1"
+        ]
+      },
+      "surface-elevated": {
+        "role": "neutral",
+        "displayName": "Gauge Panel",
+        "canonical": "#1e293b",
+        "tonalRamp": [
+          "#020617",
+          "#0f172a",
+          "#1e293b",
+          "#334155",
+          "#475569",
+          "#64748b",
+          "#94a3b8",
+          "#cbd5e1"
+        ]
+      },
+      "accent-signal": {
+        "role": "secondary",
+        "displayName": "Signal Green",
+        "canonical": "#34d399",
+        "tonalRamp": [
+          "#064e3b",
+          "#065f46",
+          "#047857",
+          "#059669",
+          "#10b981",
+          "#34d399",
+          "#6ee7b7",
+          "#a7f3d0"
+        ]
+      },
+      "text-base": {
+        "role": "neutral",
+        "displayName": "Technical Ink",
+        "canonical": "oklch(0.141 0.005 130)",
+        "tonalRamp": [
+          "oklch(0.141 0.005 130)",
+          "oklch(0.25 0.006 130)",
+          "oklch(0.38 0.007 130)",
+          "oklch(0.50 0.007 130)",
+          "oklch(0.65 0.006 130)",
+          "oklch(0.78 0.005 130)",
+          "oklch(0.90 0.003 130)",
+          "oklch(0.97 0.01 130)"
+        ]
+      },
+      "text-muted": {
+        "role": "neutral",
+        "displayName": "Calibration Grey",
+        "canonical": "oklch(0.55 0.02 130)",
+        "tonalRamp": [
+          "oklch(0.15 0.005 130)",
+          "oklch(0.28 0.01 130)",
+          "oklch(0.40 0.015 130)",
+          "oklch(0.55 0.02 130)",
+          "oklch(0.68 0.015 130)",
+          "oklch(0.80 0.01 130)",
+          "oklch(0.90 0.005 130)",
+          "oklch(0.97 0.01 130)"
+        ]
+      },
+      "border-subtle": {
+        "role": "neutral",
+        "displayName": "Spec Line",
+        "canonical": "oklch(0.922 0.01 130)",
+        "tonalRamp": [
+          "oklch(0.15 0.005 130)",
+          "oklch(0.30 0.007 130)",
+          "oklch(0.45 0.009 130)",
+          "oklch(0.60 0.01 130)",
+          "oklch(0.75 0.01 130)",
+          "oklch(0.88 0.01 130)",
+          "oklch(0.922 0.01 130)",
+          "oklch(0.97 0.01 130)"
+        ]
+      },
+      "destructive": {
+        "role": "error",
+        "displayName": "Alert Red",
+        "canonical": "oklch(0.577 0.245 27.325)",
+        "tonalRamp": [
+          "oklch(0.30 0.18 27)",
+          "oklch(0.40 0.22 27)",
+          "oklch(0.50 0.24 27)",
+          "oklch(0.577 0.245 27)",
+          "oklch(0.65 0.22 27)",
+          "oklch(0.75 0.18 27)",
+          "oklch(0.85 0.12 27)",
+          "oklch(0.95 0.05 27)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Landing page hero headlines. One per major section." },
+      "headline": { "displayName": "Headline", "purpose": "Section headers on landing, H2 in docs." },
+      "title": { "displayName": "Title", "purpose": "H3 in docs, feature headings, card labels." },
+      "body": { "displayName": "Body", "purpose": "All prose. Max 65–75ch line length on docs pages." },
+      "label": { "displayName": "Label", "purpose": "Nav items, tags, button text, metadata." }
+    },
+    "shadows": [
+      {
+        "name": "focus-halo",
+        "value": "0 0 0 3px oklch(0.205 0.06 130 / 0.5)",
+        "purpose": "Keyboard focus ring on interactive elements on the light surface."
+      },
+      {
+        "name": "ambient-lift",
+        "value": "0 1px 2px oklch(0 0 0 / 0.05)",
+        "purpose": "shadow-xs — minimal shadow on default, outline, and secondary buttons. Structural, not decorative."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Default easing for color/opacity state transitions."
+      },
+      {
+        "name": "ease-out-quart",
+        "value": "cubic-bezier(0.25, 1, 0.5, 1)",
+        "purpose": "Entrance animations and hover lifts. Exponential exit."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" },
+      { "name": "2xl", "value": "1536px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary action. Used for Get Started, Submit, and key CTAs on the light docs surface.",
+      "html": "<button class=\"ds-btn-primary\">Get Started</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 36px; padding: 0 16px; background: oklch(0.205 0.06 130); color: oklch(0.985 0 0); font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; border-radius: 8px; border: none; cursor: pointer; transition: background 0.15s, box-shadow 0.15s; box-shadow: 0 1px 2px oklch(0 0 0 / 0.05); } .ds-btn-primary:hover { background: oklch(0.24 0.06 130); } .ds-btn-primary:focus-visible { outline: none; box-shadow: 0 0 0 3px oklch(0.205 0.06 130 / 0.5); } .ds-btn-primary:disabled { opacity: 0.5; pointer-events: none; }"
+    },
+    {
+      "name": "Landing CTA Button",
+      "kind": "button",
+      "refersTo": "button-landing-cta",
+      "description": "Get Started CTA on the dark landing page. White on dark — inverts the primary pattern.",
+      "html": "<button class=\"ds-btn-landing-cta\">Get Started <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></button>",
+      "css": ".ds-btn-landing-cta { display: inline-flex; align-items: center; justify-content: center; gap: 4px; height: 32px; padding: 0 12px; background: #f8fafc; color: #020617; font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; border-radius: 8px; border: none; cursor: pointer; transition: background 0.15s; } .ds-btn-landing-cta:hover { background: #e2e8f0; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Nav-adjacent actions and secondary choices. No border, no background at rest.",
+      "html": "<button class=\"ds-btn-ghost\">Documentation</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; height: 36px; padding: 0 12px; background: transparent; color: oklch(0.55 0.02 130); font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; border-radius: 8px; border: none; cursor: pointer; transition: background 0.15s, color 0.15s; } .ds-btn-ghost:hover { background: oklch(0.97 0.01 130); color: oklch(0.141 0.005 130); }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action. Border + background, same radius as primary.",
+      "html": "<button class=\"ds-btn-outline\">View on GitHub</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 36px; padding: 0 16px; background: oklch(1 0 0); color: oklch(0.141 0.005 130); font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; border-radius: 8px; border: 1px solid oklch(0.922 0.01 130); cursor: pointer; box-shadow: 0 1px 2px oklch(0 0 0 / 0.05); transition: background 0.15s, border-color 0.15s; } .ds-btn-outline:hover { background: oklch(0.97 0.01 130); border-color: oklch(0.88 0.01 130); } .ds-btn-outline:focus-visible { outline: none; box-shadow: 0 0 0 3px oklch(0.205 0.06 130 / 0.5); }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "description": "Standard form input. Stroke border, focus ring treatment, no fill on focus.",
+      "html": "<input class=\"ds-input\" type=\"text\" placeholder=\"Search docs...\">",
+      "css": ".ds-input { display: block; width: 100%; height: 36px; padding: 0 12px; background: oklch(1 0 0); color: oklch(0.141 0.005 130); font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; border-radius: 8px; border: 1px solid oklch(0.922 0.01 130); transition: border-color 0.15s, box-shadow 0.15s; outline: none; } .ds-input::placeholder { color: oklch(0.55 0.02 130); } .ds-input:focus { border-color: oklch(0.205 0.06 130); box-shadow: 0 0 0 3px oklch(0.205 0.06 130 / 0.5); } .ds-input[aria-invalid='true'] { border-color: oklch(0.577 0.245 27.325); box-shadow: 0 0 0 3px oklch(0.577 0.245 27.325 / 0.2); }"
+    },
+    {
+      "name": "Dark Surface Card",
+      "kind": "card",
+      "description": "Feature card on landing page. Raised from Engine Room, bordered with Circuit Trace.",
+      "html": "<div class=\"ds-card-dark\"><div class=\"ds-card-dark__label\">Resources</div><div class=\"ds-card-dark__content\">Declare once in PHP. Get a full React admin interface.</div></div>",
+      "css": ".ds-card-dark { background: #0f172a; border: 1px solid #334155; border-radius: 10px; padding: 24px; } .ds-card-dark__label { color: #34d399; font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 8px; } .ds-card-dark__content { color: #cbd5e1; font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif; font-size: 0.9375rem; line-height: 1.6; }"
+    },
+    {
+      "name": "Docs Navigation Link",
+      "kind": "nav",
+      "description": "Sidebar nav item in docs. Active state uses primary color. Gently curved hover background.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" class=\"ds-nav__item ds-nav__item--active\">Installation</a><a href=\"#\" class=\"ds-nav__item\">Configuration</a><a href=\"#\" class=\"ds-nav__item\">Resources</a></nav>",
+      "css": ".ds-nav { display: flex; flex-direction: column; gap: 2px; } .ds-nav__item { display: flex; align-items: center; height: 32px; padding: 0 8px; font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; color: oklch(0.55 0.02 130); border-radius: 6px; text-decoration: none; transition: background 0.1s, color 0.1s; } .ds-nav__item:hover { background: oklch(0.97 0.01 130); color: oklch(0.141 0.005 130); } .ds-nav__item--active { background: oklch(0.97 0.01 130); color: oklch(0.205 0.06 130); font-weight: 600; }"
+    },
+    {
+      "name": "Landing Navbar",
+      "kind": "nav",
+      "description": "Fixed header on dark landing page. Frosted dark glass, white logo, slate nav links.",
+      "html": "<header class=\"ds-landing-nav\"><a href=\"/\" class=\"ds-landing-nav__logo\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"white\"><rect x=\"3\" y=\"3\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"14\" y=\"3\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"3\" y=\"14\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"14\" y=\"14\" width=\"7\" height=\"7\" rx=\"1\"/></svg><span>Monorail</span></a><nav class=\"ds-landing-nav__links\"><a href=\"/docs\">Docs</a><a href=\"https://github.com\">GitHub</a></nav><button class=\"ds-btn-landing-cta\">Get Started</button></header>",
+      "css": ".ds-landing-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; align-items: center; gap: 24px; height: 56px; padding: 0 24px; background: rgba(2, 6, 23, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.06); } .ds-landing-nav__logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: white; font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; font-weight: 700; letter-spacing: -0.01em; } .ds-landing-nav__logo svg { padding: 4px; background: rgba(255,255,255,0.1); border-radius: 6px; } .ds-landing-nav__links { display: flex; gap: 4px; margin-left: 8px; } .ds-landing-nav__links a { padding: 6px 12px; font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; color: #94a3b8; text-decoration: none; border-radius: 6px; transition: color 0.15s; } .ds-landing-nav__links a:hover { color: white; } .ds-btn-landing-cta { margin-left: auto; display: inline-flex; align-items: center; gap: 4px; height: 32px; padding: 0 12px; background: #f8fafc; color: #020617; font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; border-radius: 8px; border: none; cursor: pointer; transition: background 0.15s; } .ds-btn-landing-cta:hover { background: #e2e8f0; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Control Room",
+    "overview": "Monorail speaks to a developer who already knows what they're doing. The interface projects authority without performance — a dark cockpit on the landing page, a crisp instrument panel in the docs. Everything here has a job. Nothing decorates.\n\nThe landing page lives in near-black (surface-dark, #020617) with a single signal-green accent used with discipline. The docs surface flips to a light, green-tinted neutral system — same hue family, entirely different register. Together they say: this tool was made by people who care about craft, not by a marketing team.\n\nThis system explicitly rejects the aesthetics of SaaS launch-week fever: no gradient blobs, no big-number hero metrics, no '10x your workflow' superlatives. No neon-on-black gamer energy. No glassmorphism as decoration. The vibe is closer to a well-maintained Unix man page that happens to look exceptional.",
+    "keyCharacteristics": [
+      "Two surfaces: dark landing (engine room) + light docs (workshop bench)",
+      "Single accent color (accent-signal emerald) used sparingly on the dark surface; primary forest-green on light",
+      "Code-forward: real, readable PHP examples carry more weight than copy",
+      "Instrument Sans throughout: humanist warmth without softness",
+      "Flat by default: no ambient shadows, depth through tonal layering and borders"
+    ],
+    "rules": [
+      {
+        "name": "The One Signal Rule",
+        "body": "accent-signal (emerald) appears only on the dark landing surface. It never appears in docs or product UI. Its rarity is structural — one green note in a dark room. If it appears everywhere, it means nothing.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tint Discipline Rule",
+        "body": "Every light neutral carries hue 130° at chroma ≤0.01. This is not visible as 'green' — it reads as warmth. Never use neutral greys (chroma 0). The tint is load-bearing even when invisible.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Family Rule",
+        "body": "No secondary typeface. All hierarchy through weight (400/600/700) and size scale. If a design needs 'more personality,' add it through color and spacing — not a display font.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat-By-Default Rule",
+        "body": "Surfaces are flat at rest. Shadows appear only as a response to state. A design with shadows everywhere has no shadows at all.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do lead with real PHP code. A TextColumn::make('name')->searchable() example communicates more than three paragraphs about developer experience.",
+      "Do use accent-signal (emerald) exclusively on the dark landing surface and exclusively for active/selected states.",
+      "Do maintain the hue-130 green tint across all light neutral tokens, even at chroma as low as 0.005.",
+      "Do build hierarchy through weight contrast: 400/600/700 at meaningful scale ratios.",
+      "Do keep body text to 65–75ch max line length on docs pages.",
+      "Do use tonal layering for depth on dark surfaces. No shadows.",
+      "Do treat the fake browser chrome in admin mockups as load-bearing."
+    ],
+    "donts": [
+      "Don't use big-number hero metrics, gradient blobs, or '10x your workflow' copy.",
+      "Don't use glassmorphism decoratively.",
+      "Don't apply accent-signal (emerald) in the docs or product UI.",
+      "Don't use side-stripe border-left accents on cards or list items.",
+      "Don't use gradient text (background-clip: text).",
+      "Don't create a design that a reader could identify as belonging to a no-code tool.",
+      "Don't use neon-on-black or heavy glassmorphism.",
+      "Don't add identical card grids.",
+      "Don't introduce a second typeface.",
+      "Don't add em dashes to copy."
+    ]
+  }
+}

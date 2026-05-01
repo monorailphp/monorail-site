@@ -58,9 +58,9 @@ export default function DocsLayout({ children }: { children: React.ReactNode }) 
         <DocsContentContext.Provider value={processedContent}>
             <div className="flex min-h-screen w-full flex-col">
                 <DocsNavbar />
-                <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-4 rounded-xl p-4 md:flex-row">
-                    <aside className="sticky top-14 w-full shrink-0 self-start md:w-72">
-                        <nav className="max-h-[calc(100dvh-3.5rem)] space-y-1 overflow-y-auto p-1 pr-2">
+                <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-10 px-6 py-8 md:flex-row">
+                    <aside className="sticky top-14 w-full shrink-0 self-start md:w-64">
+                        <nav className="max-h-[calc(100dvh-3.5rem)] space-y-0.5 overflow-y-auto pr-2">
                             {pages?.map((page) => (
                                 <DocsNavItem key={page.slug || page.title} page={page} currentPage={currentPage} />
                             ))}
