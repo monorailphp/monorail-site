@@ -147,4 +147,11 @@
     .prose h1, .prose h2, .prose h3 {
         letter-spacing: -0.01em;
     }
+
+    /* Override Prism Tomorrow code block background to match slate-950 palette */
+    .prose pre[class*="language-"],
+    .prose pre {
+        background: oklch(0.16 0.015 256) !important;
+        border: 1px solid oklch(0.22 0.015 256);
+    }
 }
