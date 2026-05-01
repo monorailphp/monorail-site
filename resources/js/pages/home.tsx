@@ -3,6 +3,7 @@ import { ArrowRight, BookOpen, Github, Layers, LayoutDashboard, MonitorSmartphon
 import AppLogoIcon from '@/components/app-logo-icon';
 import { DocsNavbar } from '@/components/docs-navbar';
 import { Button } from '@/components/ui/button';
+import { SponsorsList } from '@/components/sponsors-list';
 
 function CodeBlock() {
     return (
@@ -437,6 +438,13 @@ export default function Home() {
                             Read the SDUI concept guide →
                         </Link>
                     </div>
+                </div>
+            </section>
+
+{/* Sponsors */}
+            <section className="bg-muted px-6 py-40">
+                <div className="mx-auto max-w-4xl">
+                    <SponsorsList />
                 </div>
             </section>
 
