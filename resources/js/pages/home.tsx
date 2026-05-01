@@ -476,7 +476,7 @@ export default function Home() {
             </section>
 
             {/* Sponsors */}
-            <section className="border-t border-slate-800 py-12">
+            <section className="border-t border-slate-800 py-20">
                 <div className="mx-auto max-w-3xl px-6 text-center">
                     <h2 className="mb-8 text-sm font-semibold tracking-wider text-slate-400 uppercase">Sponsored by</h2>
                     <div className="grid grid-cols-1 items-center gap-8 sm:grid-cols-3">
