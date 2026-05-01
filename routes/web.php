@@ -5,7 +5,7 @@ use App\Http\Controllers\Teams\TeamInvitationController;
 use App\Http\Middleware\EnsureTeamMembership;
 use Illuminate\Support\Facades\Route;
 
-Route::redirect('/', '/docs')->name('home');
+Route::inertia('/', 'home')->name('home');
 
 Route::get('/docs', [DocsController::class, 'index'])->name('docs');
 Route::get('/docs/{slug}', [DocsController::class, 'show'])->where('slug', '.*')->name('docs.show');
