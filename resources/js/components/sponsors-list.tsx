@@ -3,7 +3,41 @@ export const sponsors = [
     { name: 'Lymonah', logo: '/lymonah/logo.png', url: 'https://lymonah.com', domain: 'lymonah.com' },
 ];
 
-export function SponsorsList({ showLabel = true }: { showLabel?: boolean }) {
+export function SponsorsList({ showLabel = true, variant = 'default' }: { showLabel?: boolean; variant?: 'default' | 'sidebar' }) {
+    if (variant === 'sidebar') {
+        return (
+            <div className="flex flex-col gap-1">
+                <p className="mb-2 px-1 text-xs font-semibold uppercase tracking-wider text-slate-500">
+                    Sponsored by
+                </p>
+                {sponsors.map((sponsor) => (
+                    <a
+                        key={sponsor.name}
+                        href={sponsor.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="group flex w-full items-center gap-3 rounded-lg px-2 py-2.5 transition-colors hover:bg-white/5"
+                    >
+                        <div className="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-md bg-white/5">
+                            <img src={sponsor.logo} alt={sponsor.name} className="h-6 w-6 object-contain" />
+                        </div>
+                        <span className="text-sm text-slate-400 transition-colors group-hover:text-slate-200">
+                            {sponsor.domain}
+                        </span>
+                    </a>
+                ))}
+                <a
+                    href="https://github.com/sponsors/maherelgamil"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-1 flex w-full items-center gap-3 rounded-lg px-2 py-2.5 text-sm text-slate-600 transition-colors hover:bg-white/5 hover:text-slate-400"
+                >
+                    + Become a sponsor
+                </a>
+            </div>
+        );
+    }
+
     return (
         <div className="flex flex-col items-center space-y-4">
             {showLabel && (

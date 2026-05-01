@@ -78,7 +78,7 @@ return '';
                     <aside className="sticky top-14 hidden w-full shrink-0 self-start xl:block xl:w-64">
                         <DocsPageToc content={processedContent} />
                         <div className="mt-6 border-t border-slate-800 pt-6">
-                            <SponsorsList showLabel={false} />
+                            <SponsorsList variant="sidebar" />
                         </div>
                     </aside>
                 </div>
