@@ -4,11 +4,6 @@ import AppLogoIcon from '@/components/app-logo-icon';
 import { DocsNavbar } from '@/components/docs-navbar';
 import { Button } from '@/components/ui/button';
 
-const sponsors = [
-    { name: 'Sudeem', logo: '/sudeem/logo.png', url: 'https://sudeem.ai', domain: 'sudeem.ai' },
-    { name: 'Lymonah', logo: '/lymonah/logo.png', url: 'https://lymonah.com', domain: 'lymonah.com' },
-];
-
 function CodeBlock() {
     return (
         <pre className="overflow-x-auto text-sm leading-relaxed">
@@ -445,36 +440,7 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Sponsors */}
-            <section className="bg-muted py-32">
-                <div className="mx-auto max-w-3xl px-6 text-center">
-                    <h2 className="mb-8 text-sm font-semibold tracking-wider text-slate-400 uppercase">Sponsored by</h2>
-                    <div className="grid grid-cols-1 items-center gap-8 sm:grid-cols-3">
-                        {sponsors.map((sponsor) => (
-                            <a
-                                key={sponsor.name}
-                                href={sponsor.url}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="flex h-16 items-center justify-center gap-3 rounded-lg border border-slate-800 transition-colors hover:border-slate-600 hover:bg-slate-800"
-                            >
-                                <img src={sponsor.logo} alt={sponsor.name} className="h-8 w-auto max-w-[100px] object-contain" />
-                                <span className="text-sm text-slate-500">{sponsor.domain}</span>
-                            </a>
-                        ))}
-                        <a
-                            href="https://github.com/sponsors/maherelgamil"
-                            target="_blank"
-                            rel="noreferrer"
-                            className="flex h-16 items-center justify-center rounded-lg border border-dashed border-slate-700 transition-colors hover:border-slate-600 hover:bg-slate-800"
-                        >
-                            <span className="text-sm text-slate-500">Become a sponsor</span>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            {/* Install CTA */}
+{/* Install CTA */}
             <section className="border-t border-slate-800 bg-slate-950 px-6 py-24">
                 <div className="mx-auto max-w-2xl text-center">
                     <h2 className="text-3xl font-bold tracking-tight text-white">Ready to build?</h2>

@@ -2,6 +2,7 @@ import { Link, usePage } from '@inertiajs/react';
 import { useMemo } from 'react';
 import { DocsNavbar } from '@/components/docs-navbar';
 import { DocsPageToc } from '@/components/docs-page-toc';
+import { SponsorsList } from '@/components/sponsors-list';
 import { DocsContentContext } from '@/contexts/docs-context';
 import { processContentHtml } from '@/lib/process-content';
 import { show as docsShow } from '@/routes/docs';
@@ -76,6 +77,9 @@ return '';
 
                     <aside className="sticky top-14 hidden w-full shrink-0 self-start xl:block xl:w-64">
                         <DocsPageToc content={processedContent} />
+                        <div className="mt-6 border-t border-slate-800 pt-6">
+                            <SponsorsList showLabel={false} />
+                        </div>
                     </aside>
                 </div>
             </div>

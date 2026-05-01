@@ -125,6 +125,10 @@
         border-radius: var(--radius-md);
         font-style: normal;
     }
+    .prose-invert blockquote {
+        background: oklch(0.18 0.012 256);
+        color: oklch(0.82 0.01 256);
+    }
     .prose blockquote p::before,
     .prose blockquote p::after {
         content: none;
