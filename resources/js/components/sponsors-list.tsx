@@ -1,6 +1,6 @@
 export const sponsors = [
-    { name: 'Sudeem', logo: '/sudeem/logo.png', url: 'https://sudeem.ai', domain: 'sudeem.ai' },
-    { name: 'Lymonah', logo: '/lymonah/logo.png', url: 'https://lymonah.com', domain: 'lymonah.com' },
+    { name: 'Sudeem', logo: '/sudeem/logo.png', url: 'https://sudeem.ai', domain: 'Sudeem.ai' },
+    { name: 'Lymonah', logo: '/lymonah/logo.png', url: 'https://lymonah.com', domain: 'Lymonah.com' },
 ];
 
 export function SponsorsList({ showLabel = true, variant = 'default' }: { showLabel?: boolean; variant?: 'default' | 'sidebar' }) {
