@@ -1,0 +1,59 @@
+# Monorail
+> Server-Driven UI framework for Laravel + Inertia.js + React
+
+## Documentation
+
+### Introduction
+
+- [Overview](https://monorail.dev/docs/README)
+
+### Getting Started
+
+- [Installation](https://monorail.dev/docs/getting-started/installation)
+- [Quick Start](https://monorail.dev/docs/getting-started/quick-start)
+
+### Panels
+
+- [Panel Configuration](https://monorail.dev/docs/panels/configuration)
+- [Configuration Reference](https://monorail.dev/docs/configuration)
+
+### Resources
+
+- [Resources](https://monorail.dev/docs/resources/overview)
+- [Custom Resource Pages](https://monorail.dev/docs/resources/custom-pages)
+- [Relation Managers](https://monorail.dev/docs/resources/relation-managers)
+
+### Tables
+
+- [Tables](https://monorail.dev/docs/tables/columns)
+- [Filters](https://monorail.dev/docs/tables/filters)
+- [Actions](https://monorail.dev/docs/tables/actions)
+
+### Forms
+
+- [Forms](https://monorail.dev/docs/forms/fields)
+
+### Pages
+
+- [Pages](https://monorail.dev/docs/pages/overview)
+- [Page Blocks](https://monorail.dev/docs/pages/blocks)
+- [Page Actions](https://monorail.dev/docs/pages/actions)
+
+### Widgets
+
+- [Widgets](https://monorail.dev/docs/widgets/overview)
+
+### Features
+
+- [Authorization](https://monorail.dev/docs/authorization)
+- [Global Search](https://monorail.dev/docs/global-search)
+- [Notifications](https://monorail.dev/docs/notifications)
+- [Internationalization & RTL](https://monorail.dev/docs/i18n)
+
+### Advanced
+
+- [Server-Driven UI](https://monorail.dev/docs/advanced/server-driven-ui)
+
+### Contributing
+
+- [Contributing](https://monorail.dev/docs/contributing)
