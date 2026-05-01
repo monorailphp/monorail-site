@@ -132,9 +132,9 @@ function AdminMockup() {
     ];
 
     return (
-        <div className="flex h-full flex-col overflow-hidden rounded-lg border border-slate-700 bg-slate-900 text-xs">
+        <div className="flex min-h-[420px] flex-col overflow-hidden rounded-lg border border-slate-700 bg-slate-900 text-xs">
             {/* Fake browser chrome */}
-            <div className="flex items-center gap-1.5 border-b border-slate-700 bg-slate-800 px-3 py-2">
+            <div className="flex items-center gap-1.5 border-b border-slate-700 bg-slate-800 px-3 py-2.5">
                 <div className="size-2.5 rounded-full bg-red-500/70" />
                 <div className="size-2.5 rounded-full bg-yellow-500/70" />
                 <div className="size-2.5 rounded-full bg-green-500/70" />
@@ -145,44 +145,44 @@ function AdminMockup() {
 
             <div className="flex flex-1 overflow-hidden">
                 {/* Sidebar */}
-                <div className="w-36 shrink-0 border-r border-slate-700 bg-slate-800/60 p-2">
-                    <div className="mb-3 flex items-center gap-1.5 px-1">
+                <div className="w-40 shrink-0 border-r border-slate-700 bg-slate-800/60 p-2.5">
+                    <div className="mb-4 flex items-center gap-1.5 px-1">
                         <div className="flex size-4 items-center justify-center rounded bg-emerald-500/20">
                             <AppLogoIcon className="size-2.5 fill-emerald-400" />
                         </div>
                         <span className="text-[10px] font-semibold text-white">Admin</span>
                     </div>
                     <div className="space-y-0.5">
-                        <div className="rounded bg-slate-700 px-2 py-1 text-slate-300">Dashboard</div>
-                        <div className="rounded bg-emerald-500/20 px-2 py-1 font-medium text-emerald-400">Users</div>
-                        <div className="rounded px-2 py-1 text-slate-400">Posts</div>
-                        <div className="rounded px-2 py-1 text-slate-400">Settings</div>
+                        <div className="rounded px-2 py-1.5 text-slate-400">Dashboard</div>
+                        <div className="rounded bg-emerald-500/20 px-2 py-1.5 font-medium text-emerald-400">Users</div>
+                        <div className="rounded px-2 py-1.5 text-slate-400">Posts</div>
+                        <div className="rounded px-2 py-1.5 text-slate-400">Settings</div>
                     </div>
                 </div>
 
                 {/* Main content */}
-                <div className="flex flex-1 flex-col overflow-hidden p-3">
-                    <div className="mb-2 flex items-center justify-between">
+                <div className="flex flex-1 flex-col overflow-hidden p-4">
+                    <div className="mb-3 flex items-center justify-between">
                         <div>
                             <div className="font-semibold text-white">Users</div>
                             <div className="text-slate-500">3 team members</div>
                         </div>
-                        <button className="rounded bg-emerald-500 px-2 py-1 font-medium text-white">+ New User</button>
+                        <button className="rounded-md bg-emerald-500 px-2.5 py-1 font-medium text-white">+ New User</button>
                     </div>
 
                     {/* Filter bar */}
-                    <div className="mb-2 flex gap-1.5">
-                        <div className="flex-1 rounded border border-slate-700 bg-slate-800 px-2 py-1 text-slate-500">
+                    <div className="mb-3 flex gap-1.5">
+                        <div className="flex-1 rounded-md border border-slate-700 bg-slate-800 px-2.5 py-1.5 text-slate-500">
                             Search users...
                         </div>
-                        <div className="rounded border border-slate-700 bg-slate-800 px-2 py-1 text-slate-400">
+                        <div className="rounded-md border border-slate-700 bg-slate-800 px-2.5 py-1.5 text-slate-400">
                             Role ▾
                         </div>
                     </div>
 
                     {/* Table */}
-                    <div className="overflow-hidden rounded border border-slate-700">
-                        <div className="grid grid-cols-4 border-b border-slate-700 bg-slate-800 px-3 py-1.5 text-slate-400">
+                    <div className="overflow-hidden rounded-md border border-slate-700">
+                        <div className="grid grid-cols-4 border-b border-slate-700 bg-slate-800 px-3 py-2 text-slate-400">
                             <div>Name</div>
                             <div>Email</div>
                             <div>Role</div>
@@ -191,7 +191,7 @@ function AdminMockup() {
                         {users.map((u, i) => (
                             <div
                                 key={i}
-                                className="grid grid-cols-4 border-b border-slate-700/50 px-3 py-2 last:border-0 hover:bg-slate-800/50"
+                                className="grid grid-cols-4 border-b border-slate-700/50 px-3 py-2.5 last:border-0 hover:bg-slate-800/50"
                             >
                                 <div className="font-medium text-white">{u.name}</div>
                                 <div className="text-slate-400">{u.email}</div>
@@ -270,7 +270,7 @@ export default function Home() {
             <Navbar />
 
             {/* Hero */}
-            <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-slate-950 px-6 pt-14 text-center">
+            <section className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-slate-950 px-6 pt-14">
                 {/* Background grid */}
                 <div
                     className="absolute inset-0 opacity-[0.03]"
@@ -282,32 +282,30 @@ export default function Home() {
                 />
 
                 {/* Glow */}
-                <div className="pointer-events-none absolute top-1/3 left-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald-500/10 blur-3xl" />
+                <div className="pointer-events-none absolute top-1/4 right-1/4 h-[500px] w-[500px] rounded-full bg-emerald-500/8 blur-3xl" />
+                <div className="pointer-events-none absolute bottom-1/4 left-1/4 h-[300px] w-[300px] rounded-full bg-emerald-500/5 blur-3xl" />
 
-                <div className="relative z-10 max-w-4xl">
-                    <div className="mb-8 flex justify-center">
-                        <div className="flex size-16 items-center justify-center rounded-2xl bg-white/5 ring-1 ring-white/10">
-                            <AppLogoIcon className="size-9 fill-white" />
-                        </div>
-                    </div>
+                <div className="relative z-10 mx-auto w-full max-w-7xl">
+                    <p className="font-mono text-xs tracking-wide text-emerald-400/70">
+                        Admin panels for Laravel · Inertia.js · React
+                    </p>
 
-                    <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-400">
-                        Admin panels for Laravel + Inertia + React
-                    </div>
-
-                    <h1 className="mt-4 text-5xl font-extrabold tracking-tight text-white sm:text-6xl lg:text-7xl">
+                    <h1
+                        className="mt-4 text-[clamp(3rem,6vw,5rem)] font-bold tracking-tight text-white"
+                        style={{ lineHeight: 1.05, letterSpacing: '-0.025em' }}
+                    >
                         Define in PHP.
                         <br />
                         <span className="text-emerald-400">Render in React.</span>
                     </h1>
 
-                    <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-400">
-                        Build admin panels as PHP classes. Monorail serializes them to UI schemas, delivers them via
-                        Inertia.js, and React renders the result. No TypeScript schemas to duplicate, no frontend wiring
-                        to maintain.
+                    <p className="mt-8 max-w-xl text-lg leading-relaxed text-slate-400">
+                        Build admin panels as PHP classes. Monorail serializes them to UI schemas,
+                        delivers them via Inertia.js, and React renders the result. No TypeScript
+                        schemas to duplicate, no frontend wiring to maintain.
                     </p>
 
-                    <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+                    <div className="mt-10 flex flex-wrap items-center gap-3">
                         <Button size="lg" asChild className="bg-emerald-500 text-white hover:bg-emerald-400">
                             <Link href="/docs/getting-started/installation">
                                 Get Started
@@ -327,9 +325,9 @@ export default function Home() {
                         </Button>
                     </div>
 
-                    <div className="mt-8 inline-flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 px-4 py-2.5 font-mono text-sm text-slate-300">
-                        <span className="text-slate-500">$</span>
-                        composer require monorail/monorail
+                    <div className="mt-8 inline-flex items-center gap-2 rounded-md border border-white/10 bg-white/5 px-4 py-2.5 font-mono text-sm">
+                        <span className="text-slate-600">$</span>
+                        <span className="text-slate-300">composer require monorail/monorail</span>
                     </div>
                 </div>
 
@@ -342,16 +340,26 @@ export default function Home() {
             </section>
 
             {/* Code demo */}
-            <section className="bg-slate-950 px-6 pb-24">
+            <section className="bg-slate-950 px-6 py-24">
                 <div className="mx-auto max-w-7xl">
-                    <div className="mb-10 text-center">
-                        <h2 className="text-3xl font-bold tracking-tight text-white">
-                            One PHP class. A full React admin UI.
+                    <div className="mb-12">
+                        <h2
+                            className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-bold tracking-tight text-white"
+                            style={{ lineHeight: 1.15, letterSpacing: '-0.01em' }}
+                        >
+                            One PHP class.
+                            <br />
+                            <span className="text-emerald-400">A full React admin UI.</span>
                         </h2>
-                        <p className="mt-2 text-slate-400">Define it in PHP. Inertia ships it. React renders it.</p>
+                        <p className="mt-4 max-w-lg text-slate-400">
+                            Define it in PHP. Inertia ships it. React renders it.
+                        </p>
                     </div>
 
-                    <div className="grid overflow-hidden rounded-xl border border-slate-800 bg-slate-900 lg:grid-cols-2">
+                    <div className="relative grid overflow-hidden rounded-xl border border-slate-800 bg-slate-900 lg:grid-cols-[2fr_3fr]">
+                        {/* Pipeline accent */}
+                        <div className="absolute bottom-6 top-6 right-[60%] hidden w-px bg-gradient-to-b from-transparent via-emerald-500/30 to-transparent lg:block" />
+
                         {/* PHP code */}
                         <div className="border-b border-slate-800 p-6 lg:border-b-0 lg:border-r">
                             <div className="mb-3 flex items-center gap-2">
