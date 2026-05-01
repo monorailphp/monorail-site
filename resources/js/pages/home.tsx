@@ -446,7 +446,7 @@ export default function Home() {
             </section>
 
             {/* Sponsors */}
-            <section className="border-t border-slate-800 py-20">
+            <section className="py-20">
                 <div className="mx-auto max-w-3xl px-6 text-center">
                     <h2 className="mb-8 text-sm font-semibold tracking-wider text-slate-400 uppercase">Sponsored by</h2>
                     <div className="grid grid-cols-1 items-center gap-8 sm:grid-cols-3">
@@ -475,7 +475,7 @@ export default function Home() {
             </section>
 
             {/* Install CTA */}
-            <section className="bg-slate-950 px-6 py-24">
+            <section className="border-t border-slate-800 bg-slate-950 px-6 py-24">
                 <div className="mx-auto max-w-2xl text-center">
                     <h2 className="text-3xl font-bold tracking-tight text-white">Ready to build?</h2>
                     <p className="mt-3 text-slate-400">One package install away from a fully-featured admin panel.</p>
