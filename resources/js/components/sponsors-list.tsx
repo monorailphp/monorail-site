@@ -1,6 +1,6 @@
 export const sponsors = [
-    { name: 'Sudeem', logo: '/sudeem/logo.png', url: 'https://sudeem.ai', domain: 'Sudeem.ai' },
-    { name: 'Lymonah', logo: '/lymonah/logo.png', url: 'https://lymonah.com', domain: 'Lymonah.com' },
+    { name: 'Sudeem', logo: '/sudeem/logo.png', url: 'https://sudeem.ai', domain: 'SUDEEM.AI' },
+    { name: 'Lymonah', logo: '/lymonah/logo.png', url: 'https://lymonah.com', domain: 'LYMONAH.COM' },
 ];
 
 export function SponsorsList({ showLabel = true, variant = 'default' }: { showLabel?: boolean; variant?: 'default' | 'sidebar' }) {
@@ -8,7 +8,7 @@ export function SponsorsList({ showLabel = true, variant = 'default' }: { showLa
         return (
             <div className="flex flex-col gap-1">
                 <p className="mb-2 px-1 text-xs font-semibold uppercase tracking-wider text-slate-500">
-                    Sponsored by
+                    SPONSORED BY
                 </p>
                 {sponsors.map((sponsor) => (
                     <a
@@ -32,7 +32,7 @@ export function SponsorsList({ showLabel = true, variant = 'default' }: { showLa
                     rel="noreferrer"
                     className="mt-1 flex w-full items-center gap-3 rounded-lg px-2 py-2.5 text-sm text-slate-600 transition-colors hover:bg-white/5 hover:text-slate-400"
                 >
-                    + Become a sponsor
++ BECOME A SPONSOR
                 </a>
             </div>
         );
@@ -42,7 +42,7 @@ export function SponsorsList({ showLabel = true, variant = 'default' }: { showLa
         <div className="flex flex-col items-center space-y-4">
             {showLabel && (
                 <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-500">
-                    Sponsored by
+                    SPONSORED BY
                 </h3>
             )}
             <div className="flex flex-wrap items-center justify-center gap-2">
