@@ -494,7 +494,7 @@ export default function Home() {
                             Docs
                         </Link>
                         <a
-                            href="https://github.com/rocketphp/monorail"
+                            href="https://github.com/monorailphp/monorail"
                             target="_blank"
                             rel="noreferrer"
                             className="flex items-center gap-1.5 hover:text-slate-300"

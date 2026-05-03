@@ -22,7 +22,7 @@ export function DocsNavbar() {
                         Docs
                     </Link>
                     <a
-                        href="https://github.com/rocketphp/monorail"
+                        href="https://github.com/monorailphp/monorail"
                         target="_blank"
                         rel="noreferrer"
                         className="rounded-md px-3 py-1.5 text-sm text-slate-400 transition-colors hover:bg-white/5 hover:text-white"
