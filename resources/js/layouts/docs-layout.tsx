@@ -1,4 +1,5 @@
 import { Link, usePage } from '@inertiajs/react';
+import { Bot } from 'lucide-react';
 import { useMemo } from 'react';
 import { DocsNavbar } from '@/components/docs-navbar';
 import { DocsPageToc } from '@/components/docs-page-toc';
@@ -79,6 +80,18 @@ return '';
                         <DocsPageToc content={processedContent} />
                         <div className="mt-6 border-t border-slate-800 pt-6">
                             <SponsorsList variant="sidebar" />
+                        </div>
+                        <div className="mt-6 border-t border-slate-800 pt-6">
+                            <p className="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-slate-500">For LLMs</p>
+                            <a
+                                href="/llms-full.txt"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-slate-400 transition-colors hover:bg-white/5 hover:text-white"
+                            >
+                                <Bot className="size-3.5 shrink-0" />
+                                LLM
+                            </a>
                         </div>
                     </aside>
                 </div>
