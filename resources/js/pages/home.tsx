@@ -287,7 +287,7 @@ export default function Home() {
 
                     <div className="mt-8 inline-flex items-center gap-2 rounded-md border border-white/10 bg-white/5 px-4 py-2.5 font-mono text-sm">
                         <span className="text-slate-606">$</span>
-                        <span className="text-slate-300">composer require monorail/monorail</span>
+                        <span className="text-slate-300">composer require monorailphp/monorail</span>
                     </div>
                 </div>
 
