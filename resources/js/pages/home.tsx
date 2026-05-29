@@ -5,6 +5,8 @@ import { DocsNavbar } from '@/components/docs-navbar';
 import { Button } from '@/components/ui/button';
 import { SponsorsList } from '@/components/sponsors-list';
 
+const INSTALL_COMMAND = 'composer require monorailphp/monorail';
+
 function CodeBlock() {
     return (
         <pre className="overflow-x-auto text-sm leading-relaxed">
@@ -287,7 +289,7 @@ export default function Home() {
 
                     <div className="mt-8 inline-flex items-center gap-2 rounded-md border border-white/10 bg-white/5 px-4 py-2.5 font-mono text-sm">
                         <span className="text-slate-606">$</span>
-                        <span className="text-slate-300">composer require monorailphp/monorail</span>
+                        <span className="text-slate-300">{INSTALL_COMMAND}</span>
                     </div>
                 </div>
 
@@ -456,7 +458,7 @@ export default function Home() {
 
                     <div className="mt-8 inline-flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 px-5 py-3 font-mono text-base text-slate-300">
                         <span className="text-slate-500">$</span>
-                        composer require monorail/monorail
+                        {INSTALL_COMMAND}
                     </div>
 
                     <div className="mt-8 flex flex-wrap justify-center gap-3">
